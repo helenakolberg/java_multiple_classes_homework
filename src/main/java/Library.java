@@ -19,6 +19,11 @@ public class Library {
     public void addBook(Book book) {
         if (isSpace()) {
             this.stock.add(book);
+            if (this.genreCount.containsKey(book.getGenre())) {
+                this.genreCount.put(book.getGenre(), this.genreCount.get(book.getGenre()) + 1);
+            } else {
+                this.genreCount.put(book.getGenre(), 1);
+            }
         }
     }
 
@@ -28,16 +33,6 @@ public class Library {
 
     public Book removeBook() {
         return this.stock.remove(0);
-    }
-
-    public void createGenreCount() {
-        for (Book book : this.stock) {
-            if (this.genreCount.containsKey(book.getGenre())) {
-                this.genreCount.put(book.getGenre(), this.genreCount.get(book.getGenre()) + 1);
-            } else {
-                this.genreCount.put(book.getGenre(), 1);
-            }
-        }
     }
 
     public int bookCountByGenre(Book book) {

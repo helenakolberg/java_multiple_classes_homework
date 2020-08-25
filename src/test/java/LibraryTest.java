@@ -49,7 +49,6 @@ public class LibraryTest {
         library.addBook(book);
         library.addBook(book2);
         library.addBook(book3);
-        library.createGenreCount();
         assertEquals(2, library.bookCountByGenre(book));
         assertEquals(1, library.bookCountByGenre(book3));
     }

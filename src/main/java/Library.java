@@ -31,8 +31,9 @@ public class Library {
         return this.stockCount() < this.capacity;
     }
 
-    public Book removeBook() {
-        return this.stock.remove(0);
+    public Book removeBook(Book book) {
+        int index = this.stock.indexOf(book);
+        return this.stock.remove(index);
     }
 
     public int bookCountByGenre(Book book) {

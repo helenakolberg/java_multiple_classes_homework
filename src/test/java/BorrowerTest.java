@@ -23,13 +23,13 @@ public class BorrowerTest {
 
     @Test
     public void canBorrowBookFromLibrary() {
-        borrower.addBook(library);
+        borrower.addBook(library, book);
         assertEquals(1, borrower.bookCount());
     }
 
     @Test
     public void canReturnBookToLibrary() {
-        borrower.addBook(library);
+        borrower.addBook(library, book);
         borrower.returnBook(library, book);
         assertEquals(0, borrower.bookCount());
     }

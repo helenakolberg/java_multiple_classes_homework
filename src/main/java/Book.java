@@ -10,10 +10,14 @@ public class Book {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public String getAuthor() {
-        return author;
+        return this.author;
+    }
+
+    public String getGenre() {
+        return this.genre;
     }
 }

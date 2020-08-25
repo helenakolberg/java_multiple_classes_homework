@@ -6,15 +6,23 @@ import static org.junit.Assert.assertEquals;
 public class BorrowerTest {
     private Borrower borrower;
     private Book book;
+    private Library library;
 
     @Before
     public void before() {
         borrower = new Borrower();
         book = new Book("Northern Lights", "Philip Pullman", "fantasy");
+        library = new Library(100);
     }
 
     @Test
     public void canCheckBookCount() {
         assertEquals(0, borrower.bookCount());
     }
+
+//    @Test
+//    public void canAddBookToShelfFromLibrary() {
+//        borrower.addBook(library);
+//        assertEquals(1, borrower.bookCount());
+//    }
 }

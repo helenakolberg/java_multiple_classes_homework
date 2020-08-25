@@ -8,11 +8,16 @@ public class BookTest {
 
     @Before
     public void before() {
-        book = new Book("The Book Thief", "Makus Zusak", "historical fantasy");
+        book = new Book("The Book Thief", "Markus Zusak", "historical fantasy");
     }
 
     @Test
     public void hasTitle() {
         assertEquals("The Book Thief", book.getTitle());
+    }
+
+    @Test
+    public void hasAuthor() {
+        assertEquals("Markus Zusak", book.getAuthor());
     }
 }

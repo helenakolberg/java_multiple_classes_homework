@@ -32,6 +32,7 @@ public class Library {
     }
 
     public Book removeBook(Book book) {
+        this.genreCount.put(book.getGenre(), this.genreCount.get(book.getGenre()) - 1);
         int index = this.stock.indexOf(book);
         return this.stock.remove(index);
     }

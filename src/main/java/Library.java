@@ -33,7 +33,8 @@ public class Library {
     }
 
     public Book removeBook(Book book) {
-        this.genreCount.put(book.getGenre(), this.genreCount.get(book.getGenre()) - 1);
+        String genre = book.getGenre();
+        this.genreCount.put(genre, this.genreCount.get(genre) - 1);
         int index = this.stock.indexOf(book);
         return this.stock.remove(index);
     }

@@ -19,10 +19,11 @@ public class Library {
     public void addBook(Book book) {
         if (isSpace()) {
             this.stock.add(book);
-            if (this.genreCount.containsKey(book.getGenre())) {
-                this.genreCount.put(book.getGenre(), this.genreCount.get(book.getGenre()) + 1);
+            String genre = book.getGenre();
+            if (this.genreCount.containsKey(genre)) {
+                this.genreCount.put(genre, this.genreCount.get(genre) + 1);
             } else {
-                this.genreCount.put(book.getGenre(), 1);
+                this.genreCount.put(genre, 1);
             }
         }
     }

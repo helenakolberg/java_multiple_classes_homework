@@ -43,7 +43,7 @@ public class LibraryTest {
         library.addBook(book2);
         library.removeBook(book);
         assertEquals(1, library.stockCount());
-        assertEquals(1, library.bookCountByGenre(book));
+        assertEquals(1, library.bookCountByGenre("historical fantasy"));
     }
 
     @Test
@@ -51,7 +51,7 @@ public class LibraryTest {
         library.addBook(book);
         library.addBook(book2);
         library.addBook(book3);
-        assertEquals(2, library.bookCountByGenre(book));
-        assertEquals(1, library.bookCountByGenre(book3));
+        assertEquals(2, library.bookCountByGenre("historical fantasy"));
+        assertEquals(1, library.bookCountByGenre("thriller"));
     }
 }

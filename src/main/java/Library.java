@@ -39,7 +39,8 @@ public class Library {
         return this.stock.remove(index);
     }
 
-    public int bookCountByGenre(Book book) {
-        return this.genreCount.get(book.getGenre());
+    public int bookCountByGenre(String genre) {
+        int numOfBooks = this.genreCount.get(genre);
+        return numOfBooks;
     }
 }
